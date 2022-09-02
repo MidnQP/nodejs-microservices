@@ -10,12 +10,16 @@ import http from 'http';
  */
 import express from 'express';
 
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 /**
  * @description Configure env variables
  * @param config
  */
 import dotenv from 'dotenv-safe'
-dotenv.load({
+dotenv.config({
   path: `${__dirname}/config/.env`,
   sample: `${__dirname}/.env.example`,
   allowEmptyValues: false
@@ -25,19 +29,19 @@ dotenv.load({
  * @description Database config class
  * @param DBConfig
  */
-import DBConfig from './config/db.conf';
+import DBConfig from './config/db.conf.js';
 
 /**
  * @description Routes config class
  * @param Routes
  */
-import { initRoutes } from './config/routes.conf';
+import { initRoutes } from './config/routes.conf.js';
 
 /**
  * @description IApplication config class
  * @param Routes
  */
-import ApplicationConfig from './config/app.conf';
+import ApplicationConfig from './config/app.conf.js';
 
 /**
  * @description Create application with Express Framework
@@ -85,4 +89,4 @@ setImmediate(startServer);
  * @description Application object
  * @module app
  */
-module.exports = app;
+export default app;

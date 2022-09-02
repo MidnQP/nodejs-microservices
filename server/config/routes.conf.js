@@ -1,4 +1,4 @@
-import ServiceRoutes from '../api/service'
+import ServiceRoutes from '../api/service/index.js'
 
 export function initRoutes (app) {
   const startTime = new Date();

@@ -10,7 +10,7 @@ import { Router } from 'express';
  * @description Service route Controller
  * @param ServiceController
  */
-import * as ServiceController from './service.controller';
+import * as ServiceController from './service.controller.js';
 
 let router = new Router();
 

@@ -16,7 +16,7 @@ import Promise from 'bluebird';
  * @description MongoDB Schema
  * @param Schema
  */
-import { Schema } from 'mongoose';
+const { Schema } = mongoose;
 
 // Apply bluebird Promise as Mongoose Promise library
 mongoose.Promise = Promise;

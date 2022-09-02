@@ -11,7 +11,7 @@
  * @description Service Model
  * @param Service
  */
-import Service from './service.model';
+import Service from './service.model.js';
 
 /**
  * @description API Response Utility functions
@@ -29,7 +29,7 @@ import {
   removeEntity,
   saveUpdates,
   respondWithResult
-} from '../utils';
+} from '../utils.js';
 
 /**
  * @function index
